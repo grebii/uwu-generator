@@ -1,7 +1,7 @@
 # uwu-generator
 it makes the
 the text uwu like
-this "Hewwo! UwW"
+this "Hewwo! UwU"
 
 you need cargo/rustup
 https://rustup.rs/
