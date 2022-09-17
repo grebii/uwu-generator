@@ -7,20 +7,18 @@ AND THEN IT GIVES IT BACK TO YOUR CLIPBOARD AD WAD
 
 use std::env;
 
-use clipboard::{
-    ClipboardProvider,
-    ClipboardContext,
-};
+use clipboard::{ClipboardContext, ClipboardProvider};
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {              
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    
     // create a the clipboard
     let mut clipboard = ClipboardContext::new()?;
 
     // get input from enviroment argument or the clipboard
     let input = env::args().nth(1)
         .unwrap_or_else(|| clipboard.get_contents()
-            .unwrap_or_else(|e| e.to_string()) );
-    
+            .unwrap_or_else(|e| e.to_string()));
+
     println!("\n    << {}", input);
     println!(r#"        _   ___      ___   _        "#);
     println!(r#"       | | | \ \ /\ / / | | |       "#);
@@ -28,13 +26,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!(r#"        \__,_| \_/\_/  \__,_|       "#);
 
     // convert input to uwu
-    let cringe: String = input.chars().map(|c| {
-        match c {
+    let cringe: String = input
+        .chars()
+        .map(|c| match c {
             'l' | 'r' => 'w',
             'L' | 'R' => 'W',
             c => c,
-        }
-    }).collect();
+        })
+        .collect();
 
     println!("\n    >> {}", cringe);
 
