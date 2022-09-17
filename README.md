@@ -16,7 +16,7 @@ and run it in the terminal like this `uwu` or `cargo uwu` (I don't know if you n
 
 by default it will use whatever is in
 your
-clipboard if you want to
+clipboard if you want to  
 to not do that
 do this `uwu "my cool text"`
 
