@@ -6,6 +6,8 @@ this "Hewwo! UwU"
 you need cargo/rustup
 https://rustup.rs/
 
+after you have cargo installed  
+
 install it like this I think `
 cargo install --git https://github.com/grebii/uwu-generator/
 `
